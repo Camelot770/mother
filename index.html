@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книга жизни — Яна</title>
+    <meta name="description" content="С днём рождения, мамочка!">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Marck+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Loading -->
+    <div class="loading">
+        <span class="loading-text">Открываем книгу...</span>
+    </div>
+
+    <!-- Golden particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ============================== -->
+    <!-- SECTION 1: BOOK COVER (HERO)   -->
+    <!-- ============================== -->
+    <section class="hero section" id="hero">
+        <div class="book-cover">
+            <div class="book-spine"></div>
+            <div class="book-ornament-top"></div>
+            <p class="cover-title">Книга жизни</p>
+            <p class="cover-name">Яна</p>
+            <div class="book-ornament-bottom"></div>
+            <p class="cover-year">с 1977 года</p>
+        </div>
+
+        <div class="scroll-hint">
+            листать вниз
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- SECTION 2: DEDICATION          -->
+    <!-- ============================== -->
+    <section class="section dedication paper-texture" id="dedication">
+        <div style="text-align: center;">
+            <p class="dedication-text">
+                Посвящается самой лучшей<br>мамочке на свете
+            </p>
+            <span class="dedication-ornament">&#10086;</span>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- SECTION 3: TIMELINE / CHAPTERS -->
+    <!-- ============================== -->
+
+    <!-- Chapter 1: 1977 -->
+    <section class="chapter section paper-texture" id="ch1">
+        <div class="chapter-content">
+            <div class="chapter-text">
+                <p class="chapter-number">Глава первая</p>
+                <p class="chapter-year">1977</p>
+                <h2 class="chapter-title">Начало истории</h2>
+                <p class="chapter-description">
+                    20 февраля 1977 года в Казани родилась маленькая Яна — будущая лучшая мама на свете
+                </p>
+            </div>
+            <div class="chapter-photo">
+                <div class="photo-frame" style="--rotation: -2deg;" data-rotation="-2">
+                    <div class="photo-corner tl"></div>
+                    <div class="photo-corner tr"></div>
+                    <div class="photo-corner bl"></div>
+                    <div class="photo-corner br"></div>
+                    <img src="photos/1977.jpg" alt="Яна, 1977 год" loading="lazy">
+                    <span class="photo-caption">Казань, 1977</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="chapter-divider"></div>
+
+    <!-- Chapter 2: 1983 -->
+    <section class="chapter section paper-texture" id="ch2">
+        <div class="chapter-content reverse">
+            <div class="chapter-text">
+                <p class="chapter-number">Глава вторая</p>
+                <p class="chapter-year">1983</p>
+                <h2 class="chapter-title">Большая сестра</h2>
+                <p class="chapter-description">
+                    Появился братик Яша, и Яна стала заботливой старшей сестрой
+                </p>
+            </div>
+            <div class="chapter-photo">
+                <div class="photo-frame" style="--rotation: 2deg;" data-rotation="2">
+                    <div class="photo-corner tl"></div>
+                    <div class="photo-corner tr"></div>
+                    <div class="photo-corner bl"></div>
+                    <div class="photo-corner br"></div>
+                    <img src="photos/1983.jpg" alt="Яна с братом, 1983" loading="lazy">
+                    <span class="photo-caption">Яна и Яша</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="chapter-divider"></div>
+
+    <!-- Chapter 3: 1984 -->
+    <section class="chapter section paper-texture" id="ch3">
+        <div class="chapter-content">
+            <div class="chapter-text">
+                <p class="chapter-number">Глава третья</p>
+                <p class="chapter-year">1984</p>
+                <h2 class="chapter-title">Первый звонок</h2>
+                <p class="chapter-description">
+                    Первый день в школе — начало большого пути
+                </p>
+            </div>
+            <div class="chapter-photo">
+                <div class="photo-frame" style="--rotation: -1.5deg;" data-rotation="-1.5">
+                    <div class="photo-corner tl"></div>
+                    <div class="photo-corner tr"></div>
+                    <div class="photo-corner bl"></div>
+                    <div class="photo-corner br"></div>
+                    <img src="photos/1984.jpg" alt="Первый день в школе, 1984" loading="lazy">
+                    <span class="photo-caption">Первый раз в первый класс</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="chapter-divider"></div>
+
+    <!-- Chapter 4: University -->
+    <section class="chapter section paper-texture" id="ch4">
+        <div class="chapter-content reverse">
+            <div class="chapter-text">
+                <p class="chapter-number">Глава четвёртая</p>
+                <p class="chapter-year">1995</p>
+                <h2 class="chapter-title">Мечта стать врачом</h2>
+                <p class="chapter-description">
+                    Казанский медицинский университет — здесь начался путь к призванию
+                </p>
+            </div>
+            <div class="chapter-photo">
+                <div class="photo-frame" style="--rotation: 1.5deg;" data-rotation="1.5">
+                    <div class="photo-corner tl"></div>
+                    <div class="photo-corner tr"></div>
+                    <div class="photo-corner bl"></div>
+                    <div class="photo-corner br"></div>
+                    <img src="photos/university.jpg" alt="Университетские годы" loading="lazy">
+                    <span class="photo-caption">Студенческие годы</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="chapter-divider"></div>
+
+    <!-- Chapter 5: 2004 -->
+    <section class="chapter section paper-texture" id="ch5">
+        <div class="chapter-content">
+            <div class="chapter-text">
+                <p class="chapter-number">Глава пятая</p>
+                <p class="chapter-year">2004</p>
+                <h2 class="chapter-title">Самый важный день</h2>
+                <p class="chapter-description">
+                    24 августа 2004 года родился Наум — и жизнь наполнилась новым смыслом
+                </p>
+            </div>
+            <div class="chapter-photo">
+                <div class="photo-frame" style="--rotation: -2.5deg;" data-rotation="-2.5">
+                    <div class="photo-corner tl"></div>
+                    <div class="photo-corner tr"></div>
+                    <div class="photo-corner bl"></div>
+                    <div class="photo-corner br"></div>
+                    <img src="photos/2004.jpg" alt="Яна и Наум" loading="lazy">
+                    <span class="photo-caption">Мама и Наум</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="chapter-divider"></div>
+
+    <!-- Chapter 6: Career -->
+    <section class="chapter section paper-texture" id="ch6">
+        <div class="chapter-content reverse">
+            <div class="chapter-text">
+                <p class="chapter-number">Глава шестая</p>
+                <p class="chapter-year">&bull;</p>
+                <h2 class="chapter-title">Главный врач</h2>
+                <p class="chapter-description">
+                    Врач-гинеколог, главный врач 11 клиник — добрая, трудолюбивая, вдохновляющая
+                </p>
+            </div>
+            <div class="chapter-photo">
+                <div class="photo-frame" style="--rotation: 2deg;" data-rotation="2">
+                    <div class="photo-corner tl"></div>
+                    <div class="photo-corner tr"></div>
+                    <div class="photo-corner bl"></div>
+                    <div class="photo-corner br"></div>
+                    <img src="photos/career.jpg" alt="Карьера" loading="lazy">
+                    <span class="photo-caption">Главный врач</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="chapter-divider"></div>
+
+    <!-- Chapter 7: Travel -->
+    <section class="chapter section paper-texture" id="ch7">
+        <div class="chapter-content">
+            <div class="chapter-text">
+                <p class="chapter-number">Глава седьмая</p>
+                <p class="chapter-year">&bull;</p>
+                <h2 class="chapter-title">Большой мир</h2>
+                <p class="chapter-description">
+                    Любимый Израиль и весь мир — потому что жизнь создана для открытий
+                </p>
+            </div>
+            <div class="chapter-photo">
+                <div class="photo-frame" style="--rotation: -1deg;" data-rotation="-1">
+                    <div class="photo-corner tl"></div>
+                    <div class="photo-corner tr"></div>
+                    <div class="photo-corner bl"></div>
+                    <div class="photo-corner br"></div>
+                    <img src="photos/travel.jpg" alt="Путешествия" loading="lazy">
+                    <span class="photo-caption">Путешествия</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="chapter-divider"></div>
+
+    <!-- Chapter 8: Family -->
+    <section class="chapter section paper-texture" id="ch8">
+        <div class="chapter-content reverse">
+            <div class="chapter-text">
+                <p class="chapter-number">Глава восьмая</p>
+                <p class="chapter-year">&bull;</p>
+                <h2 class="chapter-title">Семья — главное</h2>
+                <p class="chapter-description">
+                    Самая семейная, самая заботливая, самая любящая
+                </p>
+            </div>
+            <div class="chapter-photo">
+                <div class="photo-frame" style="--rotation: 1.5deg;" data-rotation="1.5">
+                    <div class="photo-corner tl"></div>
+                    <div class="photo-corner tr"></div>
+                    <div class="photo-corner bl"></div>
+                    <div class="photo-corner br"></div>
+                    <img src="photos/family.jpg" alt="Семья" loading="lazy">
+                    <span class="photo-caption">Семья</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- SECTION 4: CONGRATULATION      -->
+    <!-- ============================== -->
+    <section class="section congratulation paper-texture" id="congrats">
+        <div class="congrats-content">
+            <p class="congrats-chapter">Глава 49</p>
+            <h2 class="congrats-title">Сегодня</h2>
+
+            <div class="congrats-text">
+                <span class="congrats-line">Дорогая мамочка!</span>
+                <span class="congrats-line">&nbsp;</span>
+                <span class="congrats-line">Поздравляю тебя с днём рождения!</span>
+                <span class="congrats-line">Я тебя очень сильно люблю!</span>
+                <span class="congrats-line">&nbsp;</span>
+                <span class="congrats-line">Спасибо тебе большое за всё, что ты делаешь,</span>
+                <span class="congrats-line">за твою поддержку, которую ты мне оказываешь.</span>
+                <span class="congrats-line">&nbsp;</span>
+                <span class="congrats-line">Я точно знаю, что у нас всё получится,</span>
+                <span class="congrats-line">ведь ты самая лучшая мама на свете.</span>
+                <span class="congrats-line">&nbsp;</span>
+                <span class="congrats-line">Прости, что иногда я бываю раздражительным.</span>
+                <span class="congrats-line">Я тебя правда очень сильно люблю.</span>
+                <span class="congrats-line">&nbsp;</span>
+                <span class="congrats-line congrats-signature">С любовью, Наум</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- SECTION 5: FINALE              -->
+    <!-- ============================== -->
+    <section class="section finale" id="finale">
+        <div class="finale-content">
+            <h2 class="finale-subtitle">Продолжение следует...</h2>
+
+            <!-- Cake -->
+            <div class="cake-container">
+                <div class="candles">
+                    <div class="candle">
+                        <div class="flame-glow"></div>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame-glow"></div>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame-glow"></div>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame-glow"></div>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame-glow"></div>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame-glow"></div>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle">
+                        <div class="flame-glow"></div>
+                        <div class="flame"></div>
+                    </div>
+                </div>
+                <div class="cake-top"></div>
+                <div class="cake-number">49</div>
+                <div class="cake-base"></div>
+            </div>
+
+            <p class="blow-hint">Нажми на торт, чтобы задуть свечи</p>
+
+            <!-- Life Timer -->
+            <div class="life-timer">
+                <p class="timer-label">Ты делаешь этот мир лучше уже</p>
+                <div class="timer-values">
+                    <div class="timer-unit">
+                        <span class="timer-number" id="timer-years">--</span>
+                        <span class="timer-text">лет</span>
+                    </div>
+                    <div class="timer-unit">
+                        <span class="timer-number" id="timer-days">--</span>
+                        <span class="timer-text">дней</span>
+                    </div>
+                    <div class="timer-unit">
+                        <span class="timer-number" id="timer-hours">--</span>
+                        <span class="timer-text">часов</span>
+                    </div>
+                    <div class="timer-unit">
+                        <span class="timer-number" id="timer-minutes">--</span>
+                        <span class="timer-text">минут</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
