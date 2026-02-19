@@ -1,0 +1,18 @@
+# Source photos (large files, not for deployment)
+*.pdf
+*.ppm
+*.PNG
+*.hprof
+*.save
+*.profraw
+
+# UUID-named files (raw photos)
+[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]-*.jpg
+
+# Original large photos
+IMG_*
+3AE34682-*
+
+# OS files
+.DS_Store
+Thumbs.db
